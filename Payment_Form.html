@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
+        <!-- <style>       
+        @import url(style/style.css);        
+    </style> -->
+
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <div class="paymentform">
+            <!-- <h1>GeeksforGeeks</h1>
+  
+    <h2>HTML p align Attribute</h2>
+  
+    <p align="left">
+      Left align content
+  </p>
+    <p align="center">
+      center align content
+  </p>
+    <p align="right">
+      Right align content
+  </p> -->
+            <!-- <h1>Payment Form</h1> -->
+            <div id="formhading1" class="Container">
+                <h1>Payment Form</h1>
+                <h6>Required Field are Follow *</h6>
+            </div>
+
+            <form action="/action.php">
+                <div id="fdetails" class="Container">
+                    <h4>User Details</h4>
+
+                    
+                    <p>Name: * <input type="text" placeholder="First name" required /></p>
+
+                    <p>Last Name: * <input type="text" placeholder="Last name" required /></p>
+
+                    
+                        <p>Select gender</p>
+                        <p>Male <input type="radio" name="gender" id="male" /> &nbsp; Female <input type="radio" name="gender" id="female" /> &nbsp; Other <input type="radio" name="gender" id="Other" /></p>
+                    
+                </div>
+
+                <div id="fdetails2" class="Container">
+                    <p>Address: <textarea name="Address" id="Address" cols="50" rows="5"></textarea></p>
+
+                    <!-- <h4>Select City</h4>
+             <select multiple>
+                <option>Pune</option>
+                <option>Pune</option>
+                <option>Pune</option>
+                <option>Pune</option>
+                <option>Pune</option>
+             </select> -->
+
+                    <table>
+                        <tr>
+                            <td>
+                                <p>
+                                    Select state:
+                                </p>
+                            </td>
+                            <td>
+                                <input type="text" list="City" placeholder="enter city" />
+                                <datalist id="City">
+                                    <option>Andaman and Nicobar Islands</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chandigarh</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Dadra and Nagar Haveli</option>
+                                    <option>Daman and Diu</option>
+                                    <option>Delhi</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jammu and Kashmir</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Lakshadweep</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Orissa</option>
+                                    <option>Pondicherry</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Tripura</option>
+                                    <option>Uttaranchal</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>West Bengal</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Email: * <input type="email" placeholder="abc@gmail.com" id="email" required />
+                        <p></p>
+
+                        <p>Pincode: * <input type="number" placeholder="123456" id="pincode" required /></p>
+                    </p>
+                </div>
+
+                <div id="formhading2" class="Container">
+                    <h4>Payment Details</h4>
+                </div>
+
+                <div id="fdetails3" class="Container">
+                    <p>
+                        Card Type: *
+                        <select name="card type" id="card_type" required>
+                            <option value="">--Select a card--</option>
+                            >
+                            <option value="Visa">Visa</option>
+                            <option value="Master">Master</option>
+                            <option value="Rupay">Rupay</option>
+                        </select>
+                    </p>
+
+                    <p>Card Number: * <input type="text" placeholder="000 000 000" minlength="16" maxlength="16" id="card Number" pattern="[0-9\s]+"required  /></p>
+
+                    <p>Expiration Date: * <input type="date" placeholder="00-00" required /></p>
+
+                    <p>CVV Number: * <input type="password" placeholder="000" minlength="3" maxlength="3" id="CVV_Number" required /></p>
+                    
+                    <div id="button">
+                    <p>
+                        <input type="submit" value="Pay Now" class="btn"/>
+                    </p>
+
+                    <p>
+                        <input type="reset" value="Cancel" class="btn"/>
+                    </p>
+                </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

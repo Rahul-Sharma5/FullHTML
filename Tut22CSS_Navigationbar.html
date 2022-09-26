@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation</title>
+    <style>
+        .navbar{
+            /* background-color: black; */
+            background: linear-gradient(to right top, rgb(203, 37, 159), rgb(46, 82, 224));
+            border-radius: 10px;
+            padding-top: auto;
+            
+            
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            align-items: center;
+            float:left;
+            list-style: none;
+            margin: 13px 13px;
+            padding: 10px 10px;            
+            
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: rgb(0, 0, 0)
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 18px 75px;
+            
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            text-decoration: none;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        .search img{
+            float: right;
+            width: 35px;
+            padding: auto;
+            
+            
+
+        }
+        /* .navbar ul img{
+            float: center;
+            width: 70px;
+            padding: auto;
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <!-- ul tag is used unordered list -->
+            <!-- li tag is used list item -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <!-- <img src="Playicos.jpg" alt="img"> -->
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+
+                    <img src="search.png" alt="search">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

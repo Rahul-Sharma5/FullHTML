@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        td {
+            font-weight: bold;
+            font-family: calibri;
+        }
+
+        input[type='submit'],[type='reset'],[type='button'] {
+            width: 100px;
+            height: 30px;
+            border-radius:20px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        fieldset{
+            border-radius:15px;
+        }
+
+        input[type='radio']{
+            width: 15px;
+            height: 15px;
+        }
+
+    </style>
+
+</head>
+<body background=
+"https://soteria.io/wp-content/uploads/2016/12/white-website-background-03-e1485359164119.png">
+    <center>
+        <fieldset>
+            <legend align="center"><h1><u>Student Registration Form</u></h1></legend>
+        <form>
+        <fieldset>
+            <legend align="center"><h3>Student Information</h3></legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>First Name:</td><td><input type="text" placeholder="Enter First Name" size="30" pattern="[A-Za-z\s]+" required ></td>
+                        <td>Last Name:</td><td><input type="text" placeholder="Enter Last Name" pattern="[A-Za-z\s]+" required> </td>
+                        <td rowspan="3">Upload Photo:<br><input type="file" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td><td><input type="email" placeholder="Enter Your Email" size="30" required></td>
+                        <td>Mobile Number:</td><td><input type="text" placeholder="Enter Mobile Number" required minlength="10" maxlength="10"></td>
+                    </tr>
+                    <tr>
+                        <td>DOB:</td><td><input type="date" required></td>
+                        <td>Gender:</td><td><input type="radio" name="gender" required>Male&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" required>Female<br><input type="radio" name="gender" required>Others</td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center"><h3>Address Details</h3></legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea rows="2" cols="50" required placeholder="Enter Your Address"></textarea></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>State:</td>
+                        <td>
+                            <input type="text" placeholder="Select State" list="statelist" required>
+                            <datalist id="statelist">
+                                <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Orissa</option>
+                                <option>Pondicherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Tripura</option>
+                                <option>Uttaranchal</option>
+                                <option>Uttar Pradesh</option>
+                                <option>West Bengal</option>
+                                </datalist>
+                        </td>
+                        <td>Pin Code:</td><td><input type="text" placeholder="Enter Pincode" required pattern="[0-9]+" minlength="6" maxlength="6"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>City:</td><td><input type="text" placeholder="Enter Your City" required pattern="[A-Za-z\s]+"> </td>
+                        <td>Country:</td>
+                        <td>
+                            <select name="country" required>
+                                <option value="">-- Select Country --</option>
+                                <option value="India" selected>India</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center"><h3>Personal Details</h3></legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td width="100">Hobbies:</td>
+                        <td><input type="checkbox">News</td>
+                        <td><input type="checkbox">Music</td>
+                        <td><input type="checkbox">Singing</td>
+                        <td><input type="checkbox">Reading</td>
+                        <td><input type="checkbox">Games</td>
+                        <td><input type="checkbox">Other <input type="text"></td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center"><h3>Qualification</h3></legend>
+                <table cellspacing="10">
+                    <tr>
+                        <th>Sl.No.</th>
+                        <th colspan="2">Examination Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" size="40" required></td>
+                        <td><input type="text" size="10" required></td>
+                        <td align="center">
+                            <select title="Year" required>
+                                <option value="2022" selected="1">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" size="40" required></td>
+                        <td><input type="text" size="10" required></td>
+                        <td align="center">
+                            <select title="Year" required>
+                                <option value="2022" selected="1">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td><input type="text" size="40"></td>
+                        <td><input type="text" size="10"></td>
+                        <td align="center">
+                            <select title="Year">
+                            <option value="2022" selected="1">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                         </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Post Graduation</td>
+                        <td><input type="text" size="40"></td>
+                        <td><input type="text" size="10"></td>
+                        <td align="center">
+                            <select title="Year">
+                                <option value="2022" selected="1">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                             </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+
+        <fieldset>
+            <legend align="center"><h3>Course Applied For</h3></legend>
+            <table>
+                
+                <tr>
+                    <td width="200">Select Course: </td>                    
+                    <td width="80"> <label for="101"><input type="radio" name="course" required id="101">BCA</label></td>
+                    <td width="80"><input type="radio" name="course" required id="102">BBA</td>
+                    <td width="80"><input type="radio" name="course" required id="103">MCA</td>
+                    <td width="80"><input type="radio" name="course" required id="104">MBA</td>
+                    <td width="80"><input type="radio" name="course" required id="105">PGDM</td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <table cellspacing="10">
+            <tr height="50" align="center">
+                <td width="200">
+                    <input type="submit" value="Submit">
+                </td>
+                <td width="200">
+                    <input type="reset" value="Reset">
+                </td>
+                <td width="200">
+                    <input type="button" value="Exit" onClick="window.close();">
+                </td>
+                
+            </tr>
+        </table>
+        </form>
+    </fieldset>
+    </center>
+</body>
+</html>
